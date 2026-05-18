@@ -1,0 +1,63 @@
+{
+  "schema_version": "fletch.registry.v1",
+  "generated_by": "MUNDUS known-asset seed",
+  "registry_id": "mundus-known-assets-seed",
+  "fletches": [
+    {
+      "id": "mundus.mit.ocw.home",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://ocw.mit.edu/"}],
+      "metadata": {"owner": "MIT OpenCourseWare", "domain": "open-education", "fetch_policy": "metadata_only", "license": "cc-by-nc-sa-4.0-with-exclusions", "promotion_route": "FONTES"},
+      "tags": ["mundus", "known-asset", "open-education", "mit", "ocw", "metadata-only"]
+    },
+    {
+      "id": "mundus.mit.press.open-access",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://mitpress.mit.edu/open-access/"}],
+      "metadata": {"owner": "MIT Press", "domain": "books", "fetch_policy": "metadata_only", "license": "varies-by-book", "promotion_route": "FONTES"},
+      "tags": ["mundus", "known-asset", "books", "mit-press", "open-access", "metadata-only"]
+    },
+    {
+      "id": "mundus.openstax.subjects",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://openstax.org/subjects"}],
+      "metadata": {"owner": "OpenStax", "domain": "open-textbooks", "fetch_policy": "metadata_only", "license": "cc-by-with-book-specific-details", "promotion_route": "FONTES"},
+      "tags": ["mundus", "known-asset", "open-textbooks", "openstax", "metadata-only"]
+    },
+    {
+      "id": "mundus.nist.csrc.publications",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://csrc.nist.gov/publications"}],
+      "metadata": {"owner": "NIST Computer Security Resource Center", "domain": "standards-cybersecurity", "fetch_policy": "metadata_only", "license": "public-domain-us-government-with-third-party-exclusions", "promotion_route": "MUNDUS-to-FONTES-review"},
+      "tags": ["mundus", "known-asset", "standards", "nist", "cybersecurity", "metadata-only"]
+    },
+    {
+      "id": "mundus.nasa.ntrs",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://ntrs.nasa.gov/"}],
+      "metadata": {"owner": "NASA Technical Reports Server", "domain": "aerospace-science", "fetch_policy": "metadata_only", "license": "public-domain-and-mixed-rights", "promotion_route": "MUNDUS-to-FONTES-review"},
+      "tags": ["mundus", "known-asset", "nasa", "technical-reports", "metadata-only"]
+    },
+    {
+      "id": "mundus.noaa.data-catalog",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://data.noaa.gov/"}],
+      "metadata": {"owner": "NOAA", "domain": "weather-climate-ocean", "fetch_policy": "metadata_only", "license": "public-domain-us-government-with-dataset-specific-terms", "promotion_route": "STORM-or-FONTES-review"},
+      "tags": ["mundus", "known-asset", "noaa", "weather", "climate", "metadata-only"]
+    },
+    {
+      "id": "mundus.usgs.data",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://www.usgs.gov/products/data-and-tools/data"}],
+      "metadata": {"owner": "USGS", "domain": "earth-science", "fetch_policy": "metadata_only", "license": "public-domain-us-government-with-dataset-specific-terms", "promotion_route": "PORTO-or-FONTES-review"},
+      "tags": ["mundus", "known-asset", "usgs", "earth-science", "maps", "metadata-only"]
+    },
+    {
+      "id": "mundus.loc.digital-collections",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://www.loc.gov/collections/"}],
+      "metadata": {"owner": "Library of Congress", "domain": "archives", "fetch_policy": "metadata_only", "license": "rights-vary-by-item", "promotion_route": "LUCIA-or-FONTES-review"},
+      "tags": ["mundus", "known-asset", "archives", "library-of-congress", "metadata-only"]
+    }
+  ]
+}
