@@ -45,7 +45,10 @@ archives that the portfolio should know about, even when the correct treatment i
 MUNDUS publishes `.fletch\registries\mundus-knowledge-systems-registries.json`
 as a top-level map to repo-owned FLETCH registries. Use this when the question is
 "which repo has the searchable catalog for this domain?" and then follow the
-`promotion_route` or `repo_url` metadata into that repo for deeper rows.
+`promotion_route` or `repo_url` metadata into that repo for deeper rows. The
+bridge uses raw GitHub file URLs and GitHub contents API directory URLs so
+`fletch registry index --follow` can resolve the deeper registry rows without a
+local clone of every Knowledge Systems repo.
 
 ## Non-goals
 
@@ -63,7 +66,7 @@ as a top-level map to repo-owned FLETCH registries. Use this when the question i
 ```powershell
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-known-assets-seed.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-knowledge-systems-registries.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
 git diff --check

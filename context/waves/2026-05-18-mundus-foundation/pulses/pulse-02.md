@@ -20,13 +20,15 @@ custody the assets.
   artifact rows.
 - Domain repos continue to own their `.fletch\registries\` files and validation
   history.
-- FLETCH remains the generic validate/index/search tool.
+- FLETCH remains the generic validate/index/search tool; `registry index
+  --follow` resolves raw GitHub registry files and GitHub contents directory
+  pointers when only MUNDUS is cloned locally.
 
 ## Validation commands
 
 ```powershell
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-knowledge-systems-registries.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
 git diff --check
 ```

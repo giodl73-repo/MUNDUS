@@ -27,7 +27,7 @@ FONTES/PROOF for authentic custody.
 | Asset | A known URL-addressable source, book, course, standard, dataset, archive, repository, or collection. |
 | Family | A stable owner or collection such as MIT OCW, NIST CSRC, OpenStax, NASA, NOAA, or USGS. |
 | Registry | A `fletch.registry.v1` file with searchable asset rows. |
-| Registry bridge | A MUNDUS row that points to another repo's `.fletch\registries\` entry point without taking ownership of that repo's asset rows. |
+| Registry bridge | A MUNDUS row that points to another repo's `.fletch\registries\` entry point without taking ownership of that repo's asset rows; raw GitHub and contents API pointers let FLETCH follow the bridge without local clones. |
 | Rights posture | `metadata_only`, `license_review`, `derived_text_allowed`, or `local_cache_allowed`. |
 | Promotion route | The repo/process that can turn a catalog row into custody, packs, views, or downstream evidence. |
 | Search index | A derived `fletch.registry-index.v1` report built by FLETCH from MUNDUS registries. |
@@ -84,7 +84,7 @@ stabilize.
 ```powershell
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-known-assets-seed.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-knowledge-systems-registries.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
 git diff --check
