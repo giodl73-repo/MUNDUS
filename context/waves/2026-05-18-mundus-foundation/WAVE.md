@@ -22,6 +22,7 @@ mirroring.
 - MUNDUS owns catalog registry data; FLETCH owns generic tooling.
 - The seed registry validates with FLETCH.
 - FLETCH can build a derived registry index and search metadata-only rows.
+- FLETCH can launch the local MUNDUS browser directly from the catalog registries.
 - Docs clearly separate MUNDUS cataloging from FONTES custody.
 
 ## Validation commands
@@ -32,5 +33,6 @@ mirroring.
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry web --open --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json
 git diff --check
 ```

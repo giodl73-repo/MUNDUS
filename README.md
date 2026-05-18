@@ -50,6 +50,17 @@ bridge uses raw GitHub file URLs and GitHub contents API directory URLs so
 `fletch registry index --follow` can resolve the deeper registry rows without a
 local clone of every Knowledge Systems repo.
 
+Run the full local MUNDUS browser from this repo with FLETCH:
+
+```powershell
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry web --open --follow --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json
+```
+
+The command follows the bridge pointers into GitHub-backed repo registries,
+builds the searchable index in memory, and opens the local browser. Omit `--open`
+when running in a terminal-only environment and navigate to the printed local URL
+manually.
+
 ## Non-goals
 
 - MUNDUS is not a fetch/cache engine; FLETCH owns that.
