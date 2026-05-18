@@ -23,7 +23,7 @@ archives that the portfolio should know about, even when the correct treatment i
 | FLETCH | Validate, index, and search MUNDUS registries without depending on MUNDUS data. |
 | PROOF | Later render catalog/custody status and enforce rights-boundary linting. |
 | PEBBLE/CROP | Later consume promoted source packs and catalog slices. |
-| MAXIM/LUCIA/CANON/PORTO | Discover authoritative source candidates before local backfill. |
+| MAXIM/LUCIA/CANON/PORTO/etc. | Discover authoritative source candidates and repo-owned FLETCH registry entry points before local backfill. |
 
 ## Initial scope
 
@@ -37,6 +37,15 @@ archives that the portfolio should know about, even when the correct treatment i
    families.
 5. Hand off selected assets to FONTES when full custody and PROOF evidence are
    needed.
+6. Point to repo-owned Knowledge Systems registries so MUNDUS remains the
+   one-stop discovery catalog without absorbing domain repo assets.
+
+## Knowledge Systems registry bridge
+
+MUNDUS publishes `.fletch\registries\mundus-knowledge-systems-registries.json`
+as a top-level map to repo-owned FLETCH registries. Use this when the question is
+"which repo has the searchable catalog for this domain?" and then follow the
+`promotion_route` or `repo_url` metadata into that repo for deeper rows.
 
 ## Non-goals
 
@@ -53,7 +62,9 @@ archives that the portfolio should know about, even when the correct treatment i
 
 ```powershell
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-known-assets-seed.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --output .fletch\indexes\mundus-known-assets.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-known-assets.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-knowledge-systems-registries.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
 git diff --check
 ```

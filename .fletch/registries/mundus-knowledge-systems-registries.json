@@ -1,0 +1,84 @@
+{
+  "schema_version": "fletch.registry.v1",
+  "generated_by": "MUNDUS Knowledge Systems registry bridge",
+  "registry_id": "mundus-knowledge-systems-registries",
+  "fletches": [
+    {
+      "id": "mundus.registry.fontes",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/FONTES/tree/main/.fletch/registries"}],
+      "metadata": {"owner_repo": "FONTES", "repo_url": "https://github.com/giodl73-repo/FONTES", "branch": "main", "domain": "source-custody", "fetch_policy": "metadata_only", "registry_role": "rights-reviewed external source surfaces", "promotion_route": "FONTES"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "fontes", "source-custody"]
+    },
+    {
+      "id": "mundus.registry.maxim",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/MAXIM/tree/master/.fletch/registries"}],
+      "metadata": {"owner_repo": "MAXIM", "repo_url": "https://github.com/giodl73-repo/MAXIM", "branch": "master", "domain": "reference-guides", "fetch_policy": "metadata_only", "registry_role": "guide/module source-corpus packs", "promotion_route": "MAXIM"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "maxim", "reference-guides"]
+    },
+    {
+      "id": "mundus.registry.lucia",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/LUCIA/blob/master/.fletch/registries/lucia-articles-source-corpus.json"}],
+      "metadata": {"owner_repo": "LUCIA", "repo_url": "https://github.com/giodl73-repo/LUCIA", "branch": "master", "domain": "articles-chronicle", "fetch_policy": "metadata_only", "registry_role": "article source-corpus packs", "promotion_route": "LUCIA"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "lucia", "articles"]
+    },
+    {
+      "id": "mundus.registry.canon",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/CANON/blob/main/.fletch/registries/canon-foundation-assets.json"}],
+      "metadata": {"owner_repo": "CANON", "repo_url": "https://github.com/giodl73-repo/CANON", "branch": "main", "domain": "identity-continuity", "fetch_policy": "metadata_only", "registry_role": "identity and continuity asset registry", "promotion_route": "CANON"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "canon", "identity", "continuity"]
+    },
+    {
+      "id": "mundus.registry.porto",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/PORTO/blob/main/.fletch/registries/porto-ash-vale-assets.json"}],
+      "metadata": {"owner_repo": "PORTO", "repo_url": "https://github.com/giodl73-repo/PORTO", "branch": "main", "domain": "place-route", "fetch_policy": "metadata_only", "registry_role": "region, place, route, and access assets", "promotion_route": "PORTO"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "porto", "place", "route"]
+    },
+    {
+      "id": "mundus.registry.ceres",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/CERES/blob/main/.fletch/registries/ceres-smithing-baking-assets.json"}],
+      "metadata": {"owner_repo": "CERES", "repo_url": "https://github.com/giodl73-repo/CERES", "branch": "main", "domain": "local-production", "fetch_policy": "metadata_only", "registry_role": "local-production framework and catalog assets", "promotion_route": "CERES"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "ceres", "local-production", "catalog"]
+    },
+    {
+      "id": "mundus.registry.fauna",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/FAUNA/blob/main/.fletch/registries/fauna-foundation-assets.json"}],
+      "metadata": {"owner_repo": "FAUNA", "repo_url": "https://github.com/giodl73-repo/FAUNA", "branch": "main", "domain": "animal-life", "fetch_policy": "metadata_only", "registry_role": "animal-life fixture, rubric, and capability assets", "promotion_route": "FAUNA"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "fauna", "animals", "habitat"]
+    },
+    {
+      "id": "mundus.registry.flora",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/FLORA/blob/main/.fletch/registries/flora-foundation-assets.json"}],
+      "metadata": {"owner_repo": "FLORA", "repo_url": "https://github.com/giodl73-repo/FLORA", "branch": "main", "domain": "plant-life", "fetch_policy": "metadata_only", "registry_role": "plant-life fixture, rubric, and capability assets", "promotion_route": "FLORA"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "flora", "plants", "growth"]
+    },
+    {
+      "id": "mundus.registry.rite",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/RITE/blob/main/.fletch/registries/rite-foundation-assets.json"}],
+      "metadata": {"owner_repo": "RITE", "repo_url": "https://github.com/giodl73-repo/RITE", "branch": "main", "domain": "ritual-meaning", "fetch_policy": "metadata_only", "registry_role": "ritual and obligation fixture, rubric, and capability assets", "promotion_route": "RITE"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "rite", "ritual", "obligation"]
+    },
+    {
+      "id": "mundus.registry.genes",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/GENES/blob/main/.fletch/registries/genes-foundation-assets.json"}],
+      "metadata": {"owner_repo": "GENES", "repo_url": "https://github.com/giodl73-repo/GENES", "branch": "main", "domain": "kinship-inheritance", "fetch_policy": "metadata_only", "registry_role": "kinship fixture, rubric, and lineage-map assets", "promotion_route": "GENES"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "genes", "kinship", "inheritance"]
+    },
+    {
+      "id": "mundus.registry.storm",
+      "node_kind": "fletch",
+      "shafts": [{"kind": "http", "url": "https://github.com/giodl73-repo/STORM/blob/main/.fletch/registries/storm-foundation-assets.json"}],
+      "metadata": {"owner_repo": "STORM", "repo_url": "https://github.com/giodl73-repo/STORM", "branch": "main", "domain": "weather-hazard", "fetch_policy": "metadata_only", "registry_role": "weather and hazard fixture, rubric, and scenario assets", "promotion_route": "STORM"},
+      "tags": ["mundus", "repo-registry", "knowledge-systems", "storm", "weather", "hazards"]
+    }
+  ]
+}

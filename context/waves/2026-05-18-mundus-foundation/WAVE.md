@@ -10,11 +10,12 @@ mirroring.
 
 | Pulse | Title | Status |
 |---:|---|---|
-| 1 | Repo foundation and intake | In progress |
-| 2 | Registry conventions | Planned |
-| 3 | Known-asset seed | Planned |
-| 4 | FONTES promotion bridge | Planned |
-| 5 | Search validation contract | Planned |
+| 1 | Repo foundation and intake | Done |
+| 2 | Knowledge Systems registry bridge | Done |
+| 3 | Registry conventions | Planned |
+| 4 | Known-asset expansion | Planned |
+| 5 | FONTES promotion bridge | Planned |
+| 6 | Search validation contract | Planned |
 
 ## Acceptance
 
@@ -27,7 +28,9 @@ mirroring.
 
 ```powershell
 ..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-known-assets-seed.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --output .fletch\indexes\mundus-known-assets.json
-..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-known-assets.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry validate --file .fletch\registries\mundus-knowledge-systems-registries.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry index --file .fletch\registries\mundus-known-assets-seed.json --file .fletch\registries\mundus-knowledge-systems-registries.json --output .fletch\indexes\mundus-all.json
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag known-asset --metadata fetch_policy=metadata_only --limit 5
+..\..\tools-infra\fletch\target\debug\fletch-cli.exe registry search --index .fletch\indexes\mundus-all.json --tag repo-registry --metadata fetch_policy=metadata_only --limit 12
 git diff --check
 ```
